@@ -4,14 +4,23 @@ import { TypeAnimation } from 'react-type-animation';
 import { FaInstagram, FaCamera, FaWhatsapp } from "react-icons/fa";
 
 export default function FotoMaisLandingPage() {
+
+  const getImagePath = (path: string) => {
+    if (path.startsWith("http")) return path;
+
+    const basePath =
+      process.env.NODE_ENV === "production" ? "/fotomais" : "";
+
+    return `${basePath}${path}`;
+  };
+
   const photographers = [
     {
       name: "Jean Felipe",
       role: "Fotógrafo esportivo",
       description:
         "Cobertura de corridas, ciclismo, beach tennis e grandes eventos esportivos.",
-      image:
-        "https://images.unsplash.com/photo-1504593811423-6dd665756598?q=80&w=1200&auto=format&fit=crop",
+      image: "/images/sara1.jpg",
       link: "https://lentecriativa.focoradical.com.br/",
     },
     {
@@ -19,8 +28,7 @@ export default function FotoMaisLandingPage() {
       role: "Fotógrafa esportiva",
       description:
         "Registros profissionais dos melhores momentos dos atletas e competições.",
-      image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop",
+      image: "/images/sara1.jpg",
       link: "https://srrs.focoradical.com.br/",
     },
   ];
@@ -32,7 +40,7 @@ export default function FotoMaisLandingPage() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div>
             <img
-              src="/Logo-FotoMais-Header.png"
+              src={getImagePath("/Logo-FotoMais-Header.png")}
               alt="FotoMais Fotografias"
               className="h-14 w-auto"
             />
@@ -73,7 +81,7 @@ export default function FotoMaisLandingPage() {
           className="absolute inset-0 bg-cover bg-center opacity-30"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1552674605-db6ffd4facb5?q=80&w=1600&auto=format&fit=crop')",
+              `url('${getImagePath("https://images.unsplash.com/photo-1552674605-db6ffd4facb5?q=80&w=1600&auto=format&fit=crop")}')`,
           }}
         />
 
@@ -153,7 +161,7 @@ export default function FotoMaisLandingPage() {
               >
                 <div className="relative h-[320px] overflow-hidden">
                   <img
-                    src={photographer.image}
+                    src={getImagePath(photographer.image)}
                     alt={photographer.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
