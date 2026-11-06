@@ -5,15 +5,6 @@ import { FaInstagram, FaCamera, FaWhatsapp } from "react-icons/fa";
 
 export default function FotoMaisLandingPage() {
 
-  const getImagePath = (path: string) => {
-    if (path.startsWith("http")) return path;
-
-    const basePath =
-      process.env.NODE_ENV === "production" ? "/fotomais" : "";
-
-    return `${basePath}${path}`;
-  };
-
   const photographers = [
     {
       name: "Jean Felipe",
@@ -40,7 +31,7 @@ export default function FotoMaisLandingPage() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div>
             <img
-              src={getImagePath("/Logo-FotoMais-Header.png")}
+              src={"/Logo-FotoMais-Header.png"}
               alt="FotoMais Fotografias"
               className="h-14 w-auto"
             />
@@ -81,7 +72,7 @@ export default function FotoMaisLandingPage() {
           className="absolute inset-0 bg-cover bg-center opacity-30"
           style={{
             backgroundImage:
-              `url('${getImagePath("https://images.unsplash.com/photo-1552674605-db6ffd4facb5?q=80&w=1600&auto=format&fit=crop")}')`,
+              `url('"https://images.unsplash.com/photo-1552674605-db6ffd4facb5?q=80&w=1600&auto=format&fit=crop"}')`,
           }}
         />
 
@@ -161,7 +152,7 @@ export default function FotoMaisLandingPage() {
               >
                 <div className="relative h-[320px] overflow-hidden">
                   <img
-                    src={getImagePath(photographer.image)}
+                    src={photographer.image}
                     alt={photographer.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
