@@ -72,7 +72,7 @@ export default function FotoMaisLandingPage() {
           className="absolute inset-0 bg-cover bg-center opacity-30"
           style={{
             backgroundImage:
-              `url('"https://images.unsplash.com/photo-1552674605-db6ffd4facb5?q=80&w=1600&auto=format&fit=crop"}')`,
+                "url('https://images.unsplash.com/photo-1552674605-db6ffd4facb5?q=80&w=1600&auto=format&fit=crop')",
           }}
         />
 
