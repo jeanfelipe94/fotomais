@@ -7,20 +7,12 @@ export default function FotoMaisLandingPage() {
 
   const photographers = [
     {
-      name: "Jean Felipe",
+      name: "Ulemas Bolt",
       role: "Fotógrafo esportivo",
       description:
-        "Cobertura de corridas, ciclismo, beach tennis e grandes eventos esportivos.",
-      image: "/images/sara1.jpg",
+        "Cobertura de corridas, ciclismo, trail e grandes eventos esportivos.",
+      image: "/images/Ulemas.jpg",
       link: "https://lentecriativa.focoradical.com.br/",
-    },
-    {
-      name: "Sara Rodrigues",
-      role: "Fotógrafa esportiva",
-      description:
-        "Registros profissionais dos melhores momentos dos atletas e competições.",
-      image: "/images/sara1.jpg",
-      link: "https://srrs.focoradical.com.br/",
     },
   ];
 
