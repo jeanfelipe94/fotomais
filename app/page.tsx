@@ -12,7 +12,7 @@ export default function FotoMaisLandingPage() {
       description:
         "Cobertura de corridas, ciclismo, trail e grandes eventos esportivos.",
       image: "/images/Ulemas.jpg",
-      link: "https://lentecriativa.focoradical.com.br/",
+      link: "https://banlek.com/ulemas_Bolt",
     },
   ];
 
@@ -46,7 +46,7 @@ export default function FotoMaisLandingPage() {
               Contato
             </a>
             <a
-              href="https://instagram.com/fotomaisfotografias"
+              href="https://www.instagram.com/fotomaisfotografias"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-yellow-400 transition-colors flex items-center gap-2"
@@ -136,11 +136,11 @@ export default function FotoMaisLandingPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="flex flex-wrap justify-center gap-10">
             {photographers.map((photographer) => (
               <div
                 key={photographer.name}
-                className="group bg-black border border-zinc-800 rounded-3xl overflow-hidden hover:border-yellow-400/50 transition-all duration-500 hover:-translate-y-2"
+                className="group w-full max-w-xl bg-black border border-zinc-800 rounded-3xl overflow-hidden hover:border-yellow-400/50 transition-all duration-500 hover:-translate-y-2"
               >
                 <div className="relative h-[320px] overflow-hidden">
                   <img
